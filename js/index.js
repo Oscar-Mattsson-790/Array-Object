@@ -80,15 +80,32 @@ const book = {
   title: "Iceman",
   author: "Wimhof",
   numPages: 354,
-  moreBooks: ["Breathing", "Pushup", "Meditating"],
-  getTitle: function (Breathing, Pushup, Meditating) {
-    return moreBooks;
-  },
 };
 
-console.log(book.getTitle());
+const book2 = {
+  title: "Bäver",
+  author: "Nikke",
+  numPages: 234,
+};
 
-// Letter Frequency
-letterFrequency("kalle"); // => {"k": 1. "a": 1, "l": 2, "e": 1}
-letterFrequency("aaaa"); // => {"a": 4}
-letterFrequency("ni talar bra latin"); // => {"n": 2, "i":2, " ":3, "t":2, "a":4,"l": 2,"r":2", "b":1 }
+const book3 = {
+  title: "Storm",
+  author: "Gustaf",
+  numPages: 123,
+};
+
+const moreBooks = [book, book2, book3];
+
+function findBookTitle(array, searchTerm) {
+  for (let i = 0; i < array.length; i++) {
+    if (searchTerm === array[i].title) {
+      console.log(searchTerm);
+      console.log(array[i].title);
+    }
+  }
+}
+
+findBookTitle(moreBooks, "Storm");
+// console.log(moreBooks[0].author);
+
+// console.log(book.getTitle());

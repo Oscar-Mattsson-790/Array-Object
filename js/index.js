@@ -74,3 +74,21 @@
 // console.log(str.slice(-7));
 
 // OBJECTS //
+
+// Bibblan
+const book = {
+  title: "Iceman",
+  author: "Wimhof",
+  numPages: 354,
+  moreBooks: ["Breathing", "Pushup", "Meditating"],
+  getTitle: function (Breathing, Pushup, Meditating) {
+    return moreBooks;
+  },
+};
+
+console.log(book.getTitle());
+
+// Letter Frequency
+letterFrequency("kalle"); // => {"k": 1. "a": 1, "l": 2, "e": 1}
+letterFrequency("aaaa"); // => {"a": 4}
+letterFrequency("ni talar bra latin"); // => {"n": 2, "i":2, " ":3, "t":2, "a":4,"l": 2,"r":2", "b":1 }

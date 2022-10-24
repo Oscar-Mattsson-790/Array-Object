@@ -171,39 +171,39 @@
 // console.log(users);
 
 // filterByCountry;
-// function filterByCountry(arr, country) {
-//   let searchResult = [];
+function filterByCountry(arr, country) {
+  let searchResult = [];
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i].nat === country) {
-//       console.log(arr.nat);
-//       searchResult.push(arr[i]);
-//     }
-//   }
-//   return searchResult;
-// }
-// // console.log(filterByCountry(users, "FR"))
-// // console.log(filterByCountry(users, "IR"))
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].nat === country) {
+      console.log(arr.nat);
+      searchResult.push(arr[i]);
+    }
+  }
+  return searchResult;
+}
+console.log(filterByCountry(users, "FR"));
+console.log(filterByCountry(users, "IR"));
 
 // filterByGender;
-// function filterByGender(arr, genderSex) {
-//   let searchResult = [];
-//   let males = ["Mr", "Monsieur"];
-//   let females = ["Ms", "Mrs", "Miss", "Madame", "Mademoiselle"];
+function filterByGender(arr, genderSex) {
+  let searchResult = [];
+  let males = ["Mr", "Monsieur"];
+  let females = ["Ms", "Mrs", "Miss", "Madame", "Mademoiselle"];
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if (genderSex === "Male") {
-//       if (males.includes(arr[i].name.title)) {
-//         searchResult.push(arr[i]);
-//       }
-//     }
-//     if (genderSex === "Female") {
-//       if (females.includes(arr[i].name.title)) {
-//         searchResult.push(arr[i]);
-//       }
-//     }
-//   }
-//   return searchResult;
-// }
+  for (let i = 0; i < arr.length; i++) {
+    if (genderSex === "Male") {
+      if (males.includes(arr[i].name.title)) {
+        searchResult.push(arr[i]);
+      }
+    }
+    if (genderSex === "Female") {
+      if (females.includes(arr[i].name.title)) {
+        searchResult.push(arr[i]);
+      }
+    }
+  }
+  return searchResult;
+}
 
-// console.log(filterByGender(users, "Female"));
+console.log(filterByGender(users, "Female"));

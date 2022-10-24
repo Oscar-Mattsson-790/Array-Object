@@ -208,6 +208,39 @@ function filterByGender(arr, genderSex) {
 
 console.log(filterByGender(users, "Female"));
 
+// listEmails
+
+function listEmails(arr) {
+  let searchResult = [];
+  for (let i = 0; i < arr.length; i++) {
+    searchResult.push(arr[i].email);
+  }
+  return searchResult;
+}
+
+console.log(listEmails(users));
+// return arr.map(item => item.email)
+
+// Utmaning! - Reformat Emails
+
+function newListEmails(arr) {
+  let searchResult = [];
+  for (let i = 0; i < arr.length; i++) {
+    searchResult.push(
+      `${arr[i].name.last}.${arr[i].name.first}@evilcorp.${arr[
+        i
+      ].nat.toLowerCase()}`
+    );
+  }
+  return searchResult;
+}
+console.log(newListEmails(users));
+
+// function newListEmails(arr) {
+//   return arr.map(item => `${item.name.last}.${item.name.first}@evilcorp.${item.nat.toLowerCase()}`);
+// }
+// console.log(newListEmails(users))
+
 // let oscar = [
 //   "b",
 //   "b",

@@ -268,3 +268,26 @@ console.log(newListEmails(users));
 //   console.log(index, oscar[index]);
 // }
 // console.log(oscar);
+
+function renderIndex(arr) {
+  return Math.floor(Math.random() * arr.length);
+}
+
+let removedItem = [];
+
+function generateInsult() {
+  let index = renderIndex(insults);
+
+  citat.innerHTML = insults[index].insult;
+  name.innerHTML = insults[index].play;
+
+  console.log(" insults array: ", insults);
+  console.log(" The insult ", insults[index]);
+
+  removedItem.push(insults[index]);
+  console.log("Removed Items list:", removedItem);
+  insult.splice(index, 1);
+  console.log(" Insults Array AFTER splice", insults[index]);
+}
+
+console.log(generateInsult());

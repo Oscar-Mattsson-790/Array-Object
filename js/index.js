@@ -53,7 +53,7 @@
 //15.
 // let addFruit = fruits.splice(2, 0, "orange", "lemon", "blueberry");
 // console.log(fruits);
-//16.
+// 16;
 // let names = ["David", "Christoffer", "Johan", "Maja"];
 // let removeNames = names.splice(1, 2);
 // console.log(names);
@@ -75,37 +75,109 @@
 
 // OBJECTS //
 
-// Bibblan
-const book = {
-  title: "Iceman",
-  author: "Wimhof",
-  numPages: 354,
-};
+// Övning: Bibblan;
+// const book = {
+//   title: "Iceman",
+//   author: "Wimhof",
+//   numPages: 354,
+// };
 
-const book2 = {
-  title: "Bäver",
-  author: "Nikke",
-  numPages: 234,
-};
+// const book2 = {
+//   title: "Storm",
+//   author: "Gustaf",
+//   numPages: 123,
+// };
 
-const book3 = {
-  title: "Storm",
-  author: "Gustaf",
-  numPages: 123,
-};
+// const book3 = {
+//   title: "Storm",
+//   author: "Gustaf",
+//   numPages: 123,
+// };
 
-const moreBooks = [book, book2, book3];
+// const moreBooks = [book, book2, book3];
 
-function findBookTitle(array, searchTerm) {
-  for (let i = 0; i < array.length; i++) {
-    if (searchTerm === array[i].title) {
-      console.log(searchTerm);
-      console.log(array[i].title);
+// function findBookTitle(array, searchTerm) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (searchTerm === array[i].title) {
+//       console.log(searchTerm);
+//       console.log(array[i].title);
+//     }
+//   }
+// }
+
+// findBookTitle(moreBooks, "Storm");
+
+// function findBook(booksArr, searchTitle) {
+//   console.log("bookArr:", booksArr);
+//   console.log("title:", searchTitle);
+
+//   for (let i = 0; i < booksArr.length; i++) {
+//     // console.log("i:", i);
+//     // console.log(booksArr[i]);
+//     const book = booksArr[i];
+//     // console.log(book.title);
+//     if (book.title == searchTitle) {
+//       // console.log("Hittade boken", book);
+//       return book;
+//     }
+//   }
+
+//   // for (const book of booksArr) {
+//   //   console.log("book", book);
+//   // }
+
+//   return null;
+// }
+
+// function searchBooks() {
+//   let books = [
+//     { title: "Storm", author: "Gustaf", numPages: 123 },
+//     { title: "Fire", author: "Lasse", numPages: 323 },
+//     { title: "Iceman", author: "Wimhof", numPages: 454 },
+//     { title: "Stoneman", author: "Kajsa", numPages: 254 },
+//   ];
+//   const searchResult = findBook(books, "Iceman");
+//   console.log(searchResult);
+// }
+
+// searchBooks();
+
+// /**
+//  * 1. Loopa ut vår sträng i en for-loop
+//  * 2. Om vi hittar tecknet för första gången lägg till det i objektet med värde 1
+//  * 3. Ifall vi redan har hittat första förekomsten av tecknet, addera med 1
+//  */
+
+// function letterFrequency(text) {
+//   let result = {};
+
+//   for (let char of text) {
+//     console.log(char);
+//     if (result[char] == undefined) {
+//       result[char] = 1;
+//       console.log(result);
+//     } else {
+//       result[char] = result[char] + 1; // En kortate variant result[char]++;
+//     }
+//   }
+
+//   console.log(result);
+// }
+
+// letterFrequency("kalle");
+// letterFrequency("aaaa");
+// letterFrequency("ni talar bra latin");
+
+// console.log(users);
+
+function countryCode(input) {
+  let countrFilt = [];
+  for (let index = 0; index < users.length; index++) {
+    const element = users[index];
+    if (element["nat" == input]) {
+      countrFilt.push(element);
     }
   }
+  return countrFilt;
 }
-
-findBookTitle(moreBooks, "Storm");
-// console.log(moreBooks[0].author);
-
-// console.log(book.getTitle());
+console.log(countryCode("FR"));

@@ -207,3 +207,31 @@ function filterByGender(arr, genderSex) {
 }
 
 console.log(filterByGender(users, "Female"));
+
+// let oscar = [
+//   "b",
+//   "b",
+//   "c",
+//   "d",
+//   "e",
+//   "f",
+//   "a",
+//   "a",
+//   "d",
+//   "e",
+//   "k",
+//   "j",
+//   "d",
+//   "o",
+//   "p",
+//   "p",
+//   "a",
+//   "d",
+//   "l",
+//   "k",
+// ];
+
+// for (let index = 2; index < oscar.length; index++) {
+//   console.log(index, oscar[index]);
+// }
+// console.log(oscar);

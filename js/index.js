@@ -17,10 +17,10 @@
 // let animal = animals.splice(1, 1, "tiger");
 // console.log(animals);
 // //7.
-// // let a = [1, 2, 3];
-// // let b = [4, 5, 6];
-// // let ab = a.concat(b);
-// // console.log(ab);
+// let a = [1, 2, 3];
+// let b = [4, 5, 6];
+// let ab = a.concat(b);
+// console.log(ab);
 // //8.
 // let a = [1, 2, 3, 7, 8, 9];
 // let b = [4, 5, 6];
@@ -64,15 +64,14 @@
 // //18.
 // let str = "Supercalifragilisticexpialidocious";
 // console.log(str.includes("n"));
-// //19.
+// // //19.
 // console.log(str.includes("x"));
-// //20.
+// // //20.
 // console.log(str.indexOf("p"));
-// //21.
+// // //21.
 // console.log(str.slice(0, 5));
-// //22.
+// // //22.
 // console.log(str.slice(-7));
-
 // OBJECTS //
 
 // Övning: Bibblan;
@@ -171,123 +170,95 @@
 // console.log(users);
 
 // filterByCountry;
-function filterByCountry(arr, country) {
-  let searchResult = [];
+// function filterByCountry(arr, country) {
+//   let searchResult = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].nat === country) {
-      console.log(arr.nat);
-      searchResult.push(arr[i]);
-    }
-  }
-  return searchResult;
-}
-console.log(filterByCountry(users, "FR"));
-console.log(filterByCountry(users, "IR"));
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].nat === country) {
+//       console.log(arr.nat);
+//       searchResult.push(arr[i]);
+//     }
+//   }
+//   return searchResult;
+// }
+// console.log(filterByCountry(users, "FR"));
+// console.log(filterByCountry(users, "IR"));
 
-// filterByGender;
-function filterByGender(arr, genderSex) {
-  let searchResult = [];
-  let males = ["Mr", "Monsieur"];
-  let females = ["Ms", "Mrs", "Miss", "Madame", "Mademoiselle"];
+// // filterByGender;
+// function filterByGender(arr, genderSex) {
+//   let searchResult = [];
+//   let males = ["Mr", "Monsieur"];
+//   let females = ["Ms", "Mrs", "Miss", "Madame", "Mademoiselle"];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (genderSex === "Male") {
-      if (males.includes(arr[i].name.title)) {
-        searchResult.push(arr[i]);
-      }
-    }
-    if (genderSex === "Female") {
-      if (females.includes(arr[i].name.title)) {
-        searchResult.push(arr[i]);
-      }
-    }
-  }
-  return searchResult;
-}
+//   for (let i = 0; i < arr.length; i++) {
+//     if (genderSex === "Male") {
+//       if (males.includes(arr[i].name.title)) {
+//         searchResult.push(arr[i]);
+//       }
+//     }
+//     if (genderSex === "Female") {
+//       if (females.includes(arr[i].name.title)) {
+//         searchResult.push(arr[i]);
+//       }
+//     }
+//   }
+//   return searchResult;
+// }
 
-console.log(filterByGender(users, "Female"));
+// console.log(filterByGender(users, "Female"));
 
 // listEmails
 
-function listEmails(arr) {
-  let searchResult = [];
-  for (let i = 0; i < arr.length; i++) {
-    searchResult.push(arr[i].email);
-  }
-  return searchResult;
-}
+// function listEmails(arr) {
+//   let searchResult = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     searchResult.push(arr[i].email);
+//   }
+//   return searchResult;
+// }
 
-console.log(listEmails(users));
-// return arr.map(item => item.email)
+// console.log(listEmails(users));
+// // return arr.map(item => item.email)
 
-// Utmaning! - Reformat Emails
+// // Utmaning! - Reformat Emails
 
-function newListEmails(arr) {
-  let searchResult = [];
-  for (let i = 0; i < arr.length; i++) {
-    searchResult.push(
-      `${arr[i].name.last}.${arr[i].name.first}@evilcorp.${arr[
-        i
-      ].nat.toLowerCase()}`
-    );
-  }
-  return searchResult;
-}
-console.log(newListEmails(users));
+// function newListEmails(arr) {
+//   let searchResult = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     searchResult.push(
+//       `${arr[i].name.last}.${arr[i].name.first}@evilcorp.${arr[
+//         i
+//       ].nat.toLowerCase()}`
+//     );
+//   }
+//   return searchResult;
+// }
+// console.log(newListEmails(users));
 
 // function newListEmails(arr) {
 //   return arr.map(item => `${item.name.last}.${item.name.first}@evilcorp.${item.nat.toLowerCase()}`);
 // }
 // console.log(newListEmails(users))
 
-// let oscar = [
-//   "b",
-//   "b",
-//   "c",
-//   "d",
-//   "e",
-//   "f",
-//   "a",
-//   "a",
-//   "d",
-//   "e",
-//   "k",
-//   "j",
-//   "d",
-//   "o",
-//   "p",
-//   "p",
-//   "a",
-//   "d",
-//   "l",
-//   "k",
-// ];
-
-// for (let index = 2; index < oscar.length; index++) {
-//   console.log(index, oscar[index]);
+// function renderIndex(arr) {
+//   return Math.floor(Math.random() * arr.length);
 // }
-// console.log(oscar);
 
-function renderIndex(arr) {
-  return Math.floor(Math.random() * arr.length);
-}
+// let removedItem = [];
 
-let removedItem = [];
+// function generateInsult() {
+//   let index = renderIndex(insults);
 
-function generateInsult() {
-  let index = renderIndex(insults);
+//   citat.innerHTML = insults[index].insult;
+//   name.innerHTML = insults[index].play;
 
-  citat.innerHTML = insults[index].insult;
-  name.innerHTML = insults[index].play;
+//   console.log(" insults array: ", insults);
+//   console.log(" The insult ", insults[index]);
 
-  console.log(" insults array: ", insults);
-  console.log(" The insult ", insults[index]);
+//   removedItem.push(insults[index]);
+//   console.log("Removed Items list:", removedItem);
+//   insult.splice(index, 1);
+//   console.log(" Insults Array AFTER splice", insults[index]);
+// }
 
-  removedItem.push(insults[index]);
-  console.log("Removed Items list:", removedItem);
-  insult.splice(index, 1);
-  console.log(" Insults Array AFTER splice", insults[index]);
-}
-
-console.log(generateInsult());
+// console.log(generateInsult());
